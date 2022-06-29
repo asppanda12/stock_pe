@@ -1,0 +1,125 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'profile.css' %}">
+
+    <div class="container">
+        <div class="main">
+            <div class="topbar">
+                <a href="">LogOut</a>
+                <a href="/router">Learn Stocks</a>
+                <a href="/home">Prediction</a>
+                <a href="">Home</a>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mt-1">
+                    <div class="card text-center sidebar">
+                        <div class="card-body">
+                            <img src="{% static 'image.jpg' %}" class="rounded-circle" width="150">
+                            <div class="mt-3">
+                                <h3>{{val.user}}</h3>
+                                <a href="">Home</a>
+                                <a href="">Work</a>
+                                <a href="">Support</a>
+                                <a href="">Setting</a>
+                                <a href="">Signout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 mt-1">
+                    <div class="card mb-3 content">
+                        <h1 class="m-3 pt-3">About</h1>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>Full Name</h5>
+                                </div>
+                                <div class="col-md-9 text-secondary">
+                                    {{val.user}}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>Email</h5>
+                                </div>
+                                <div class="col-md-9 text-secondary">
+                                    sameer@gmail.com
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>Phone</h5>
+                                </div>
+                                <div class="col-md-9 text-secondary">
+                                    9209257869
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>Address</h5>
+                                </div>
+                                <div class="col-md-9 text-secondary">
+                                    Street no. 4, Sakchi
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 content">
+                        <h1 class="m-3">SHARE PURCHASED</h1>
+                        <div class="card-body">
+                            <table class="table table-striped table-dark">
+                                <thead>
+                                    <tr>
+                                        <th>Stock Name</th>
+                                        <th>Cost price</th>
+                                        <th>Quantity</th>
+                                        <th>Profit</th>
+                                    </tr>
+                                </thead>
+                                {% for portfoli in portfolio %}
+                                <tbody>
+                                    <tr>
+
+
+                                        <td>{{portfoli.stock_name}}</td>
+                                        <td>{{portfoli.stock_cc}}</td>
+                                        <td>{{portfoli.no_of_share}}</td>
+                                        <td>{{portfoli.total_profit}}</td>
+
+                                    </tr>
+                                </tbody>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    </body>
+
+</html>

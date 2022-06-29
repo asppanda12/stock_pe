@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main page</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
+        /* border: 2px solid red; */
+    }
+    body{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 98vh;
+background-color: hsl(185, 41%, 84%);
+}
+.main{
+    overflow: hidden;
+    padding: .5em;
+        border-radius: 10px;
+        width: 60%;
+         box-shadow: 0 0 50px 1px rgb(0, 0, 0,0.2);
+         background-color: hsl(189, 41%, 97%);;
+        display: grid;
+grid-template-rows: 50% 50%;
+grid-template-columns: 33% auto;
+        grid-template-areas:"wti img"
+                            "hti img" ;
+                            gap:1em;
+
+    }
+    .w-t-i{
+grid-area: wti;
+    }
+    .h-t-i{
+        grid-area: hti;
+    }
+    img{
+        grid-area: img;
+        object-fit: cover;
+        width: 100%; 
+    }
+    p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn{
+        font-size: clamp(1.0rem,2.5vw,1.5rem);
+        padding: clamp(.7em,2vw,1em) clamp(.5em,2vw,.7em);
+        color: whitesmoke;
+        background-color: hsl(183, 100%, 15%);
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        transition: .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    .btn:hover{
+        background-color: whitesmoke;
+        color: hsl(183, 100%, 15%);
+        border: 2px solid black;
+    }
+    @media screen and (max-width:900px) {
+        .main{
+            width: 80%;
+            display: grid;
+            grid-template-rows:  60% 20% 20%;
+            grid-template-columns: 100%;
+            grid-template-areas:"img"
+            "wti"
+            "hti" ;
+            gap:5px;
+            
+        }
+        img{
+
+            height: 100%;
+        }
+        .btn{
+            width: 70%;
+        }
+}
+</style>
+<body>
+    <div class="main">
+        <img src="https://www.forbes.com/advisor/wp-content/uploads/2020/07/what-investing-900x510.jpg" alt="Not found">
+        <p class="w-t-i">
+         <button type="submit" class="btn" onclick="window.open('/home')" >SEE MY PREDICTION IN STOCKS</button>
+        </p>
+        <p class="h-t-i">
+            
+            <button type="submit" class="btn" onclick="window.open('/login1')" >LEARN STOCKS</button>
+
+        </p>
+    </div>
+</body>
+</html>

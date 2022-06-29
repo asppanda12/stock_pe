@@ -1,0 +1,193 @@
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Space Mono', monospace;
+    }
+
+    :root {
+        --Strong_cyan: hsl(172, 67%, 45%);
+        --Very_dark_cyan: hsl(183, 100%, 15%);
+        --Dark_grayish_cyan_1: hsl(186, 14%, 43%);
+        --Dark_grayish_cyan_2: hsl(184, 14%, 56%);
+        --Light_grayish_cyan_1: hsl(185, 41%, 84%);
+        --Light_grayish_cyan_2: hsl(189, 41%, 97%);
+        --White: hsl(0, 0%, 100%);
+    }
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .attribution a {
+        color: hsl(228, 45%, 44%);
+    }
+
+    body {
+        min-height: 100vh;
+        background-color: var(--Light_grayish_cyan_1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .container {
+        height: 27em;
+        width: clamp(650px, 65%, 100%);
+        background-color: var(--White);
+        /* box-shadow: 0 0 50px rgb(0, 0, 0,0.2); */
+        border-radius: 20px;
+        padding: clamp(1.5em, 1.6em, 2em);
+        box-sizing: border-box;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .calc {
+        width: 42%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        color: var(--Dark_grayish_cyan_1);
+    }
+
+    .goal,
+    .stocks,
+    .saving-range,
+    .rate,
+    .inflation {
+        width: 100%;
+    }
+
+    .value,
+    .rate-value,
+    .inflation-value {
+        margin-top: 0.4em;
+        display: inline-block;
+        width: 100%;
+        padding: 0.2em 0.3em;
+        background-color: var(--Light_grayish_cyan_2);
+        color: var(--Dark_grayish_cyan_2);
+        box-sizing: border-box;
+        border-radius: 5px;
+        position: relative;
+        border: none;
+        text-align: right;
+        font-size: 1.2rem;
+        margin-bottom: 0.5em;
+    }
+
+    .goal label,
+    .saving-range label,
+    .rate-value,
+    .inflation-value {
+        position: relative;
+    }
+
+    .goal label::before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 0;
+        bottom: 0;
+        width: 20px;
+        background: url('/Indian-Rupee-symbol.svg') center / contain no-repeat;
+        z-index: 11;
+        opacity: .5;
+    }
+
+    .stocks label {
+        position: relative;
+    }
+
+    .display {
+        width: 55%;
+        background-color: var(--Very_dark_cyan);
+        border-radius: 10px;
+        padding: 1.5em;
+        box-sizing: border-box;
+        margin: -.6em;
+    }
+
+
+
+    .goal input:focus,
+    .stocks input:focus {
+        outline: 3px solid;
+        outline-color: var(--Strong_cyan);
+
+    }
+
+    input:focus::placeholder {
+        color: transparent;
+    }
+
+    .curr-saving-amt,
+    .risk-factor,
+    .months-req {
+        width: 100%;
+        margin-bottom: 1em;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button {
+        width: 100%;
+        padding: 0.5em;
+        color: var(--Very_dark_cyan);
+        background-color: hsl(183, 81%, 23%);
+        font-size: 1.1rem;
+        font-weight: 700;
+        border: none;
+        margin-top: 5em;
+    }
+
+    button:hover {
+        background-color: var(--Strong_cyan);
+    }
+
+    .hd {
+        color: white;
+        font-weight: 500;
+
+    }
+
+    .per {
+        color: var(--Dark_grayish_cyan_2);
+    }
+
+    .num {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--Strong_cyan);
+    }
+
+    @media screen and (max-width:650px) {
+        .container {
+            justify-content: space-between;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+        }
+
+        .calc,
+        .display {
+            width: 100%;
+        }
+
+        .tip-value span {
+            width: 4em;
+        }
+
+        .display {
+            margin: 0;
+        }
+    }

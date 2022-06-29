@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;1,200&display=swap"
+        rel="stylesheet">
+    <title>sell page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'sell.css' %}">
+</head>
+
+<body>
+    <div class="page">
+        <div class="nav">
+            <div class="day">
+                <h3 class="title">Day</h3>
+                <p>1</p>
+            </div>
+
+            <ul class="options">
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/buy.html">Buy</a></li>
+                <li><a href="#">Sell</a></li>
+            </ul>
+            <div class="total">
+                <h3 class="title">Total</h3>
+                <p>10000</p>
+            </div>
+        </div>
+
+
+  <div class="inventory">
+        <h3 class="title title-of">Inventory</h3>
+        <div class="table">
+       <table class="inventory-table">
+    <thead>
+        <tr>
+            <th>Stock Name</th>
+            <th>Cost price</th>
+            <th >Quantity</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>noname</td>
+            <td>0.00</td>
+            <td>0</td>
+            <td>0.00</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>      
+        <div class="sell">
+            <h3 class="title title-of">sell Stocks</h3>
+            <form action="sellshare" method="post" class="sell-details">
+                {% csrf_token %}
+                <div class="sell-stocks">
+                    <h3 class="sell-stocks-head title">Stocks</h3>
+                    <label for="value1">
+                        <select name="stocks" class="value" id="inp_1">
+                            <option value="0" selected disabled hidden>Select Stocks
+                            </option>
+                            <option >ITC</option>
+                            <option >PTC</option>
+                            <option >NTPC</option>
+                            <option >TATA MOTORS</option>
+                            <option >IRCTC</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="quantity">
+                    <h3 class="Quantity-head title">Quantity</h3>
+                    <label for="value2">
+                        <input type="number" name="Quantity" id="inp_2">
+                </div>
+                <div class="quantity">
+                    <h3 class="Quantity-head title">Selling_price</h3>
+                    <label for="value2">
+                        <input type="number" name="selling price" id="inp_2">
+                </div>
+                <button type="submit" class="btn">sell</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

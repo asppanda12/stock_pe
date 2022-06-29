@@ -1,0 +1,254 @@
+        body,
+        .page {
+            min-height: 100vh;
+        }
+
+        .page {
+            font-family: 'Source Sans Pro', sans-serif;
+            width: 90%;
+            /* min-width: 350px; */
+            margin: auto;
+            /* justify-content: start; */
+            box-shadow: 0 0 10px 3px hsl(186, 14%, 43%);
+            /* justify-content: center; */
+            /* align-items: center;*/
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+            /* border: 2px solid red; */
+        }
+        
+        p,
+        a,
+        th,
+        td,.btn,select,input {
+            font-size: clamp(1rem, 4vw, 1.4rem);
+        }
+        
+        .title {
+            font-size: clamp(1.2rem, 5vw, 1.6rem);
+        }
+        
+        .nav,
+        .day,
+        .total,
+        .options {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .day {
+            padding-left: .4rem;
+        }
+        
+        .nav,
+        a {
+            background-color: hsl(183, 100%, 15%);
+            color: white;
+        }
+        
+        a {
+            padding: .3em 1em;
+        }
+        
+        .nav {
+            padding: 10px 0;
+        }
+        
+        .day {
+            width: 20%;
+            border: 2px solid white;
+            padding: .1em .5em;
+            margin-left: 1em;
+            border-radius: 5px;
+        }
+        
+        .options {
+            flex-shrink: 1;
+        }
+        
+        ul {
+            width: 40%;
+            padding-left: 0;
+            text-decoration: none;
+        }
+        
+        ul li {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        ul li a {
+            text-decoration: none;
+            border: 2px solid whitesmoke;
+            border-radius: 10px;
+            transition: .2s;
+        }
+        
+        a:hover,
+        .total {
+            color: hsl(183, 97%, 12%);
+            background-color: hsl(185, 41%, 84%);
+            ;
+        }
+        
+        .total {
+            margin-right: 1em;
+            width: 40%;
+            border-radius: 5px;
+        }
+        
+        .curr-holding-value,
+        .net-value {
+            width: 49%;
+            box-shadow: 0 4px 10px 1px hsl(186, 14%, 43%);
+        }
+        
+        
+        .Stocks-table,
+        .buy--table {
+            margin: auto;
+            margin-top: 1em;
+            width: 70%;
+            box-shadow: 0 4px 10px 1px hsl(186, 14%, 43%);
+        }
+        
+        .title-of {
+            width: 100%;
+            color: hsl(183, 97%, 12%);
+            position: relative;
+            overflow: hidden;
+            font-weight: 400;
+        }
+        
+        .title-of::before,
+        .title-of::after {
+            content: '';
+            height: 100%;
+            overflow: hidden;
+            background: hsl(172, 67%, 45%);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            /* width: 100%; */
+            z-index: -2;
+        }
+        
+        .Stocks .title:before,.buy .title:before {
+            right: 60%;
+        }
+        .Stocks .title:after,.buy .title:after {
+            left: 60%;
+        }
+        
+        
+        th,
+        td,
+        .curr-holding-value p,
+        .net-value p {
+            padding: 2px;
+            text-align: center;
+            color: hsl(185, 100%, 10%);
+            background-color: hsl(185, 41%, 84%);
+        }
+        
+        th,
+        .curr-holding-value .title,
+        .net-value .title ,.buy-details .title{
+            background-color: hsl(183, 100%, 15%);
+            color: hsl(0, 0%, 95%);
+            
+        }
+        
+        .title,
+        p {
+            text-align: center;
+        }
+        
+        .current-balance-details {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin: auto;
+            align-items: center;
+        }
+        .Stocks,
+        .current-balance-details,
+        .buy {
+            width: 100%;
+            margin-bottom: 2em;
+        }
+        
+        .buy,
+        .Stocks {
+            padding: 1em 0;
+        }
+        .buy-details{
+            margin-top: 3em;
+            display: flex;
+            gap: 2em;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+        .btn{
+            padding: 12px 25px;
+            border: none;
+            text-transform: uppercase;
+            margin: auto 0;
+            border: none;
+            box-shadow: 0 3px 6px 2px grey;
+            border-radius: 5px;
+            color: white;
+            background-color: hsl(183, 100%, 15%);
+            cursor: pointer;
+            transition: .3s;
+        }
+        .btn:hover{
+            background-color: rgb(183, 238, 220);
+            color: hsl(183, 100%, 15%);
+            
+        }
+        select,input{
+            border: none;
+            background-color: #c5e4e7;
+            color: hsl(183, 100%, 15%);
+            font-size: clamp(1rem, 4vw, 1.2rem);
+            padding-left: 10px;
+        }
+        .quantity,.buy-stocks{
+            
+            box-shadow: 0 0px 6px 2px hsl(184, 14%, 56%);
+        }
+        @media screen and (max-width:700px) {
+            .nav {
+                flex-direction: column;
+                gap: 1em;
+            }
+            .title-of{
+                border: 2px solid black;
+                width: 90%;
+                margin: auto;
+            }
+            .title-of::before,
+            .title-of::after {
+                display: none;
+            }
+            
+            .Stocks-table,
+            .current-balance-details,
+            .buy--table {
+                width: 98%;
+            }
+            .buy-details{
+                justify-content: flex-start;
+                flex-direction: column;
+            }
+        }

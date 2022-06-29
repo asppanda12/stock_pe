@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;1,200&display=swap"
+        rel="stylesheet">
+    <title>buy page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'buy.css' %}">
+</head>
+
+<body>
+    <div class="page">
+        <div class="nav">
+            <div class="day">
+                <h3 class="title">Day</h3>
+                <p>1</p>
+            </div>
+            
+            <ul class="options">
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="#">Buy</a></li>
+                <li><a href="/sell.html">Sell</a></li>
+            </ul>
+            <div class="total">
+                <h3 class="title">Total</h3>
+                <p>10000</p>
+            </div>
+        </div>
+        <div class="Stocks">
+            <h3 class="title title-of">Stocks</h3>
+            <div class="table">
+                <table class="Stocks-table">
+                    <thead>
+                        <tr>
+                            <th>Name </th>
+                            <th>open price</th>
+                            <th>current price</th>
+                            <th>Volume</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>noname</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="buy">
+            <h3 class="title title-of">Buy Stocks</h3>
+               <form method="POST" action="buyshare" class="buy-details">
+                {% csrf_token %}
+                    <div class="buy-stocks">
+                        <h3 class="buy-stocks-head title">Stocks</h3>
+                        <label for="value1">
+                            <select name="stocks" class="value" id="inp_1">
+                                <option value="0" selected disabled hidden>Select Stocks
+                                </option>
+                                <option >ITC</option>
+                                <option >PTC</option>
+                                <option >NTPC</option>
+                                <option >TATA MOTORS</option>
+                                <option >IRCTC</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="quantity">
+                        <h3 class="Quantity-head title">Quantity</h3>
+                        <label for="value2">
+                            <input type="number" name="Quantity" id="inp_2">
+                    </div>
+                    <div class="quantity">
+                        <h3 class="Quantity-head title">NOW VALUE</h3>
+                        <label for="value2">
+                            <input type="number" name="stock_cc" id="inp_2">
+                    </div>
+                    <button type="submit" class="btn">Buy</button>
+               </form>
+        </div>
+    </div>
+</body>
+
+</html>

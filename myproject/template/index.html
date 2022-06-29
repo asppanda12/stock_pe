@@ -1,0 +1,112 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="calc">
+            <div class="goal">
+                <h3 class="goal-head"> Goal</h3>
+                <label for="value1">
+                    <input type="text" class="value" value="{{thisdict.Goal}}" id="inp_1">
+                </label>
+            </div>
+            <div class="saving-range">
+                <h3 class="saving-range-head"> Saving-Range</h3>
+                <label for="value1">
+                    <input type="range" class="value" value="{{thisdict.saving}}" id="inp_1">
+                </label>
+            </div>
+            <div class="goal">
+                <h3 class="goal-head"> Stock</h3>
+                <label for="value1">
+                    <input type="text" class="value" value="{{thisdict.stock}}" id="inp_1">
+                </label>
+
+            </div>
+            <div class="rate">
+                <h3 class="rate-head"> Interest Rate</h3>
+                <div class="rate-value">
+                    {{thisdict.per_return}}%
+                </div>
+            </div>
+            <div class="inflation">
+                <h3 class="inflation-head"> Inflation</h3>
+                <div class="inflation-value">
+                    {{thisdict.inflation}}%
+                </div>
+            </div>
+        </div>
+        <div class="display">
+            <div class="curr-saving-amt">
+                <span>
+                    <span class="hd">
+                        Saving Amount
+                    </span>
+                    <br>
+                    <span class="per">
+                        / in rupees
+                    </span>
+                </span>
+                <span class="num">
+                    {{thisdict.saving}}
+                </span>
+            </div>
+            <div class="risk-factor">
+                <span>
+                    <span class="hd">
+                        No Of Share
+                    </span>
+                    <br>
+                    <span class="per">
+                        / in count
+                    </span>
+                </span>
+                <span class="num">
+                    {{thisdict.share}}
+                </span>
+            </div>
+            <div class="months-req">
+                <span>
+                    <span class="hd">
+                        Time Period
+                    </span>
+                    <br>
+                    <span class="per">
+                        / in days
+                    </span>
+                </span>
+                <span class="num">
+                    {{thisdict.Period}}
+                </span>
+            </div>
+            <!-- <a class="reset" class="btn btn-primary " href="/ ">Useradministration</a> -->
+            <!-- <button class="reset" type="submit" class="btn btn-link" >Sign up</button> -->
+            <button type="submit" class="reset" onclick="window.open('/ ')" >Reset</button>
+
+
+            <!-- <button class="reset" onclickhref="www.google.com">RESET</button> -->
+        </div>
+    </div>
+    <script>
+        function fun(id) {
+            let sp = document.getElementById('tip-id');
+            sp.classList.toggle('tip_active');
+        }
+    </script>
+</body>
+
+</html>

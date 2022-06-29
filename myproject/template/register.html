@@ -1,0 +1,170 @@
+<!-- <!doctype html> -->
+<!-- <html lang="en">
+  <head> -->
+    <!-- Required meta tags -->
+    <!-- <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <form method="post" action="register">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="exampleInputEmail1">user_name</label>
+            <input type="text" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Account_no">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your account with anyone else.</small>
+          </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">account</label>
+          <input type="text" class="form-control"name="account" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Account_no">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your account with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Savings</label>
+            <input type="number" class="form-control" name="saving" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Saving amount">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your account with anyone else.</small>
+          </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+  </head>
+  <body>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html> --> -->
+
+
+
+
+
+
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Contact Form 10</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<link rel="stylesheet" type="text/css" href="{% static 'style1.css' %}">
+
+</head>
+
+<body>
+	<section class="ftco-section img bg-hero" style="background-image: url( '/static/bg_1.jpg' );">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">SHARE PRICES</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-11">
+					<div class="wrapper">
+						<div class="row no-gutters justify-content-between">
+							<div class="col-lg-6 d-flex align-items-stretch">
+								<div class="info-wrap w-100 p-5">
+									<h3 class="mb-4">Contact us</h3>
+									<div class="dbox w-100 d-flex align-items-start">
+										<div class="icon d-flex align-items-center justify-content-center">
+											<span class="fa fa-map-marker"></span>
+										</div>
+										<div class="text pl-4">
+											<p><span>Address:</span> IIIT BHUBANESWAR,GOTHAPATNA</p>
+										</div>
+									</div>
+									<div class="dbox w-100 d-flex align-items-start">
+										<div class="icon d-flex align-items-center justify-content-center">
+											<span class="fa fa-phone"></span>
+										</div>
+										<div class="text pl-4">
+											<p><span>Phone:</span> <a href="tel://1234567920">9102292778</a></p>
+										</div>
+									</div>
+									<div class="dbox w-100 d-flex align-items-start">
+										<div class="icon d-flex align-items-center justify-content-center">
+											<span class="fa fa-paper-plane"></span>
+										</div>
+										<div class="text pl-4">
+											<p><span>Email:</span> <a
+													href="mailto:info@yoursite.com">iiitnoname@gmail.com</a></p>
+										</div>
+									</div>
+									<div class="dbox w-100 d-flex align-items-start">
+										<div class="icon d-flex align-items-center justify-content-center">
+											<span class="fa fa-globe"></span>
+										</div>
+										<div class="text pl-4">
+											<p><span>Website</span> <a href="#">SHIVAM-NIRBHAY-SAMEER.com</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-5">
+								<div class="contact-wrap w-100 p-md-5 p-4">
+									<h3 class="mb-4">CHECK YOUR SHARES PRICES</h3>
+									<div id="form-message-warning" class="mb-4"></div>
+									<div id="form-message-success" class="mb-4">
+										Your message was sent, thank you!
+									</div>
+									<form method="post" action="register">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">user_name</label>
+                        <input type="text" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Account_no">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your account with anyone else.</small>
+                      </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">account</label>
+                      <input type="text" class="form-control"name="account" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Account_no">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your account with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Savings</label>
+                        <input type="number" class="form-control" name="saving" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Saving amount">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your account with anyone else.</small>
+                      </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+									<button type="submit" class="reset" class="btn btn-primary" onclick="window.open('/register1')" >SIGNUP</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- <script src="{% static 'jquery.min.js' %}"></script>
+	<script src="{% static 'popper.js' %}"></script> -->
+	<!-- <script src="{% static 'bootstrap.min.js' %}"></script> -->
+	<!-- <script src="{% static 'jquery.validate.min.js' %}"></script>
+	<script src="{% static 'main.js' %}"></script> -->
+
+</body>
+
+</html>
